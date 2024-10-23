@@ -1,6 +1,7 @@
 import { BentoCard } from '@/components/bento-card'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import ExecutiveMessage from '@/components/executive-message'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
 import { Keyboard } from '@/components/keyboard'
@@ -62,21 +63,14 @@ function Hero() {
   )
 }
 
-function FeatureSection() {
+function FoundersDesk() {
   return (
-    <div className="overflow-hidden">
-      <Container className="pb-24">
-        <Heading as="h2" className="max-w-3xl">
-          A snapshot of your entire sales pipeline.
-        </Heading>
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-[36rem] sm:h-auto sm:w-[76rem]"
-        />
-      </Container>
-    </div>
+    <ExecutiveMessage
+      imageSrc='asd'
+      name='Rudransh Shrivastava'
+      quote=' lorem lorem lorem'
+      title='Founder & CEO'
+    />
   )
 }
 
@@ -142,9 +136,9 @@ function BentoSection() {
           title="Studio for rent"
           description="Radiant helps you sell in locations currently under international embargo."
           graphic={
-          // <Map />
-          <DummyImage/>
-        }
+            // <Map />
+            <DummyImage />
+          }
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
@@ -223,6 +217,7 @@ export default function Home() {
       </main>
       <Testimonials />
       <Pricing />
+      <FoundersDesk />
       <Footer />
     </div>
   )

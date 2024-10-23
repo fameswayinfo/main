@@ -31,7 +31,7 @@ const products = [
 
 export default function OrderSummary() {
     return (
-        <div className="">
+        <div className="mt-5">
 
             <header className="relative mx-auto bg-transparent py-6 lg:grid lg:grid-cols-2 ">
             </header>

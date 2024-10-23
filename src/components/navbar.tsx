@@ -14,8 +14,9 @@ import { Heading } from './text'
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
-  // { href: '/company', label: 'Company' },
-  { href: '/login', label: 'Login' },
+  { href: '/company', label: 'Company' },
+  { href: '/#reviews', label: 'Reviews' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 function DesktopNav() {
@@ -85,7 +86,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
               <Link href="/" title="Home">
                 {/* <Logo className="h-9" /> */}
                 {/* <Heading as={'h2'} className='text-lg'>Famesway</Heading> */}
-                <h2 className='text-2xl font-bold sm:text-4xl'>Famesway</h2>
+                <h2 className='text-2xl font-semibold sm:text-4xl'>Famesway</h2>
               </Link>
             </PlusGridItem>
             {banner && (

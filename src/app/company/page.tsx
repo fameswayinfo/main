@@ -1,9 +1,11 @@
 import { AnimatedNumber } from '@/components/animated-number'
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import ExecutiveMessage from '@/components/executive-message'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
+import Person from '@/components/person'
 import { Heading, Lead, Subheading } from '@/components/text'
 import type { Metadata } from 'next'
 
@@ -56,23 +58,10 @@ function Header() {
                 className="block size-full object-cover"
               />
             </div>
-            <div className="aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
-              <img
-                alt=""
-                src="/company/3.jpg"
-                className="block size-full object-cover"
-              />
-            </div>
-            <div className="-mt-8 aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10 lg:-mt-32">
-              <img
-                alt=""
-                src="/company/4.jpg"
-                className="block size-full object-cover"
-              />
-            </div>
+            
           </div>
         </div>
-        <div className="max-lg:mt-16 lg:col-span-1">
+        {/* <div className="max-lg:mt-16 lg:col-span-1">
           <Subheading>The Numbers</Subheading>
           <hr className="mt-6 border-t border-gray-200" />
           <dl className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -101,35 +90,17 @@ function Header() {
               </dd>
             </div>
           </dl>
-        </div>
+        </div> */}
       </section>
     </Container>
   )
 }
 
-function Person({
-  name,
-  description,
-  img,
-}: {
-  name: string
-  description: string
-  img: string
-}) {
-  return (
-    <li className="flex items-center gap-4">
-      <img alt="" src={img} className="size-12 rounded-full" />
-      <div className="text-sm/6">
-        <h3 className="font-medium">{name}</h3>
-        <p className="text-gray-500">{description}</p>
-      </div>
-    </li>
-  )
-}
+
 
 function Team() {
   return (
-    <Container className="mt-32">
+    <Container className="mt-32 pb-24">
       <Subheading>Meet the team</Subheading>
       <Heading as="h3" className="mt-2">
         Founded by an all-star team.
@@ -465,8 +436,9 @@ export default function Company() {
       </Container>
       <Header />
       <Team />
-      <Investors />
-      <Careers />
+      {/* <Investors /> */}
+      {/* <Careers /> */}
+      <ExecutiveMessage />
       <Footer />
     </main>
   )
