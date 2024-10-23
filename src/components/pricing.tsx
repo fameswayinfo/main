@@ -147,7 +147,9 @@ export default function Pricing() {
     return (
         <PricingProvider>
             <PricingHeader />
-            <Tabs />
+            <Container>
+                <Tabs />
+            </Container>
             <PricingCards />
         </PricingProvider>
     )

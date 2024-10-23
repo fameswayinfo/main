@@ -481,9 +481,9 @@ export default function Pricing({
       <Container>
         <Navbar />
       </Container>
+      <AllPricing />
       {/* <Header /> */}
       {/* <PricingCards /> */}
-      <AllPricing />
       {/* <PricingTable selectedTier={tier} /> */}
       <Testimonial />
       {/* <FrequentlyAskedQuestions /> */}

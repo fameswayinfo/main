@@ -2,6 +2,7 @@ import { BuildingOfficeIcon, CreditCardIcon, UserIcon, UsersIcon } from '@heroic
 import { useContext, useMemo } from 'react'
 import { PricingContext, usePricingContext } from './pricing'
 import { classNames } from '@/utils/helper';
+import { Container } from './container';
 
 export default function Tabs() {
     const { packages, handleChangePackageTab } = usePricingContext();
@@ -16,23 +17,8 @@ export default function Tabs() {
     }, [packages]);
 
     return (
-        <div className="max-w-7xl mx-auto pt-7">
-            <div className="sm:hidden">
-                <label htmlFor="tabs" className="sr-only">
-                    Select a tab
-                </label>
-                <select
-                    id="tabs"
-                    name="tabs"
-                    defaultValue={tabs.find((tab) => tab.current)?.name}
-                    className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
-                >
-                    {tabs.map((tab) => (
-                        <option key={tab.name}>{tab.name}</option>
-                    ))}
-                </select>
-            </div>
-            <div className="hidden sm:block">
+        <div className="mx-auto pt-7 overflow-x-auto">
+            <div className="">
                 <div className="border-b border-gray-200">
                     <nav aria-label="Tabs" className="-mb-px flex space-x-8">
                         {tabs.map(({ name, Icon, current, id }) => (
@@ -54,7 +40,7 @@ export default function Tabs() {
                                         '-ml-0.5 mr-2 h-5 w-5',
                                     )}
                                 />
-                                <span>{name}</span>
+                                <span className='whitespace-nowrap'>{name}</span>
                             </div>
                         ))}
                     </nav>
