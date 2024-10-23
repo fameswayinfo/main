@@ -28,7 +28,7 @@ export default function Tabs() {
                                 onClick={() => handleChangePackageTab(id)}
                                 className={classNames(
                                     current
-                                        ? 'border-pink-500 text-pink-600'
+                                        ? 'border-purple-600 text-purple-700'
                                         : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
                                     'group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium cursor-pointer',
                                 )}
@@ -36,7 +36,7 @@ export default function Tabs() {
                                 <Icon
                                     aria-hidden="true"
                                     className={classNames(
-                                        current ? 'text-pink-500' : 'text-gray-400 group-hover:text-gray-500',
+                                        current ? 'text-purple-600' : 'text-gray-400 group-hover:text-gray-500',
                                         '-ml-0.5 mr-2 h-5 w-5',
                                     )}
                                 />
