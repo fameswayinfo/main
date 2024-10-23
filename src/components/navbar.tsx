@@ -14,7 +14,7 @@ import { Heading } from './text'
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
-  { href: '/company', label: 'Company' },
+  // { href: '/company', label: 'Company' },
   { href: '/login', label: 'Login' },
 ]
 
