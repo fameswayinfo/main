@@ -31,32 +31,32 @@ const products = [
 
 export default function OrderSummary() {
     return (
-        <div className="mt-5">
+        <div className="lg:mt-5 mt-0 w-full">
 
-            <header className="relative mx-auto bg-transparent py-6 lg:grid lg:grid-cols-2 ">
+            <header className="relative mx-auto bg-transparent lg:py-6 py-0">
             </header>
 
-            <main className="relative mx-auto grid w-full grid-cols-1 gap-x-16 lg:grid-cols-2 ">
+            <main className="relative mx-auto grid w-full grid-cols-1 gap-x-16 lg:grid-cols-2 pb-10">
                 <h1 className="sr-only">Checkout</h1>
 
                 <section
                     aria-labelledby="summary-heading"
-                    className=" pb-12 pt-6 text-gray-700 md:px-10 lg:col-start-2 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-8xl lg:px-0 lg:pb-24 lg:pt-0"
+                    className="w-full pb-12 pt-6 text-gray-700 lg:col-start-2 lg:row-start-1 lg:mx-auto lg:px-0 lg:pb-24 lg:pt-0"
                 >
-                    <div className="mx-auto relative max-w-2xl px-4 lg:max-w-none lg:p-10 border rounded-2xl  h-full inset-0 bottom-0 bg-[linear-gradient(115deg,var(--tw-gradient-stops))] from-[#ffffff] from-[28%]  via-[70%] to-[#fff3fb] sm:bg-[linear-gradient(145deg,var(--tw-gradient-stops))]">
+                    <div className="mx-auto relative px-6 py-7 lg:p-10 border rounded-2xl h-full inset-0 bottom-0 bg-[linear-gradient(115deg,var(--tw-gradient-stops))] from-[#ffffff] from-[28%] via-[70%] to-[#fff3fb] sm:bg-[linear-gradient(145deg,var(--tw-gradient-stops))]">
 
                         <h2 id="summary-heading" className="sr-only">
                             Order summary
                         </h2>
 
                         <dl>
-                            <dt className="text-2xl font-medium text-gray-700">Amount due</dt>
-                            <dd className="mt-1 text-3xl font-bold tracking-tight text-gray-900">$232.00</dd>
+                            <dt className="text-lg lg:text-2xl font-medium text-gray-700">Amount due</dt>
+                            <dd className="mt-1 lg:text-3xl text-2xl font-bold tracking-tight text-gray-900">$232.00</dd>
                         </dl>
 
                         <ul role="list" className="divide-y divide-gray-200 text-sm font-medium">
                             {products.map((product) => (
-                                <li key={product.id} className="flex items-start space-x-4 py-6">
+                                <li key={product.id} className="flex items-start space-x-4 py-3 lg:py-6">
                                     {/* <img
                                         alt={product.imageAlt}
                                         src={product.imageSrc}
@@ -98,14 +98,14 @@ export default function OrderSummary() {
 
                 <section
                     aria-labelledby="payment-and-shipping-heading"
-                    className="py-16 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-2xl lg:pb-24 lg:pt-0"
+                    className="py-0 sm:py-0 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-2xl lg:pb-24 lg:pt-0 sm:ml-1 ml-0.5"
                 >
                     <h2 id="payment-and-shipping-heading" className="sr-only">
                         Payment and shipping details
                     </h2>
 
                     <form>
-                        <div className="mx-auto max-w-2xl px-4 lg:max-w-none lg:px-0">
+                        <div className="mx-auto max-w-2xl  lg:max-w-none lg:px-0">
                             <div>
                                 <h3 id="contact-info-heading" className="text-lg font-medium text-gray-900">
                                     Contact information

@@ -25,7 +25,7 @@ const page = () => {
             <Container className='h-full flex-1 relative '>
                 <GradientBackground />
                 <Navbar />
-                <main className="h-full  flex-1 relative">
+                <main className="h-full flex-1 relative">
                     <CompanyHeader />
                     <OrderSummary />
                 </main>
