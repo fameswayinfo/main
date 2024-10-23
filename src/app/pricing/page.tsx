@@ -7,6 +7,7 @@ import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import AllPricing from '@/components/pricing'
 import {
   CheckIcon,
   ChevronUpDownIcon,
@@ -480,9 +481,10 @@ export default function Pricing({
       <Container>
         <Navbar />
       </Container>
-      <Header />
-      <PricingCards />
-      <PricingTable selectedTier={tier} />
+      {/* <Header /> */}
+      {/* <PricingCards /> */}
+      <AllPricing />
+      {/* <PricingTable selectedTier={tier} /> */}
       <Testimonial />
       {/* <FrequentlyAskedQuestions /> */}
       <Footer />

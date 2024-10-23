@@ -1,95 +1,57 @@
+'use client'
+import { createContext, useContext, useState } from "react"
 import { Button } from "./button"
 import { Container } from "./container"
 import { Gradient } from "./gradient"
 import { LogoCloud } from "./logo-cloud"
+import Tabs from "./tabs"
 import { Heading, Lead, Subheading } from "./text"
 
-const tiers = [
-    {
-        name: 'Starter' as const,
-        slug: 'starter',
-        description: 'Everything you need to start selling.',
-        priceMonthly: 99,
-        href: '#',
-        highlights: [
-            { description: 'Up to 3 team members' },
-            { description: 'Up to 5 deal progress boards' },
-            { description: 'Source leads from select platforms' },
-            { description: 'RadiantAI integrations', disabled: true },
-            { description: 'Competitor analysis', disabled: true },
-        ],
-        features: [
-            { section: 'Features', name: 'Accounts', value: 3 },
-            { section: 'Features', name: 'Deal progress boards', value: 5 },
-            { section: 'Features', name: 'Sourcing platforms', value: 'Select' },
-            { section: 'Features', name: 'Contacts', value: 100 },
-            { section: 'Features', name: 'AI assisted outreach', value: false },
-            { section: 'Analysis', name: 'Competitor analysis', value: false },
-            { section: 'Analysis', name: 'Dashboard reporting', value: false },
-            { section: 'Analysis', name: 'Community insights', value: false },
-            { section: 'Analysis', name: 'Performance analysis', value: false },
-            { section: 'Support', name: 'Email support', value: true },
-            { section: 'Support', name: '24 / 7 call center support', value: false },
-            { section: 'Support', name: 'Dedicated account manager', value: false },
-        ],
-    },
-    {
-        name: 'Growth' as const,
-        slug: 'growth',
-        description: 'All the extras for your growing team.',
-        priceMonthly: 149,
-        href: '#',
-        highlights: [
-            { description: 'Up to 10 team members' },
-            { description: 'Unlimited deal progress boards' },
-            { description: 'Source leads from over 50 verified platforms' },
-            { description: 'RadiantAI integrations' },
-            { description: '5 competitor analyses per month' },
-        ],
-        features: [
-            { section: 'Features', name: 'Accounts', value: 10 },
-            { section: 'Features', name: 'Deal progress boards', value: 'Unlimited' },
-            { section: 'Features', name: 'Sourcing platforms', value: '100+' },
-            { section: 'Features', name: 'Contacts', value: 1000 },
-            { section: 'Features', name: 'AI assisted outreach', value: true },
-            { section: 'Analysis', name: 'Competitor analysis', value: '5 / month' },
-            { section: 'Analysis', name: 'Dashboard reporting', value: true },
-            { section: 'Analysis', name: 'Community insights', value: true },
-            { section: 'Analysis', name: 'Performance analysis', value: true },
-            { section: 'Support', name: 'Email support', value: true },
-            { section: 'Support', name: '24 / 7 call center support', value: true },
-            { section: 'Support', name: 'Dedicated account manager', value: false },
-        ],
-    },
-    {
-        name: 'Enterprise' as const,
-        slug: 'enterprise',
-        description: 'Added flexibility to close deals at scale.',
-        priceMonthly: 299,
-        href: '#',
-        highlights: [
-            { description: 'Unlimited active team members' },
-            { description: 'Unlimited deal progress boards' },
-            { description: 'Source leads from over 100 verified platforms' },
-            { description: 'RadiantAI integrations' },
-            { description: 'Unlimited competitor analyses' },
-        ],
-        features: [
-            { section: 'Features', name: 'Accounts', value: 'Unlimited' },
-            { section: 'Features', name: 'Deal progress boards', value: 'Unlimited' },
-            { section: 'Features', name: 'Sourcing platforms', value: '100+' },
-            { section: 'Features', name: 'Contacts', value: 'Unlimited' },
-            { section: 'Features', name: 'AI assisted outreach', value: true },
-            { section: 'Analysis', name: 'Competitor analysis', value: 'Unlimited' },
-            { section: 'Analysis', name: 'Dashboard reporting', value: true },
-            { section: 'Analysis', name: 'Community insights', value: true },
-            { section: 'Analysis', name: 'Performance analysis', value: true },
-            { section: 'Support', name: 'Email support', value: true },
-            { section: 'Support', name: '24 / 7 call center support', value: true },
-            { section: 'Support', name: 'Dedicated account manager', value: true },
-        ],
-    },
-]
+import defaultPackages from "@/utils/data/packages"
+import '@/utils/helper';
+import PlusIcon from "./icons/plus-icon"
+
+type PricingContext = {
+    handleChangePackageTab: (id: number) => void;
+    packages: object[];
+    currentPackage: object
+}
+
+export const PricingContext = createContext<PricingContext | undefined>(undefined);
+
+export function PricingProvider({ children }: { children: React.ReactNode }) {
+    const [packages, setPackages] = useState(defaultPackages);
+
+    const handleChangePackageTab = (id: number) => {
+        setPackages((packages) => packages.map((pack, i) => {
+            return { ...pack, current: id === pack.id }
+        }))
+    }
+
+    const currentPackage = packages.find((pack, i) => pack.current) as object;
+
+    return (
+        <PricingContext.Provider value={{ handleChangePackageTab, packages, currentPackage }}>
+            <div className="pt-10 pb-24">
+                {children}
+            </div>
+        </PricingContext.Provider>
+    )
+}
+
+export function usePricingContext() {
+    const packages = useContext(PricingContext);
+
+    if (!packages) {
+        throw new Error('Context used outside of provider');
+    }
+
+    return {
+        handleChangePackageTab: packages?.handleChangePackageTab,
+        packages: packages?.packages,
+        currentPackage: packages?.currentPackage
+    }
+}
 
 function PricingHeader() {
     return (
@@ -101,14 +63,6 @@ function PricingHeader() {
                 Sign up today and start selling smarter.
             </Lead>
         </Container>
-    )
-}
-
-function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-    return (
-        <svg viewBox="0 0 15 15" aria-hidden="true" {...props}>
-            <path clipRule="evenodd" d="M8 0H7v7H0v1h7v7h1V8h7V7H8V0z" />
-        </svg>
     )
 }
 
@@ -133,31 +87,33 @@ function FeatureItem({
     )
 }
 
-function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
+function PricingCard({ tier }: { tier: any }) {
+    const { name, description, priceMonthly, href, highlights } = tier;;
+
     return (
         <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
             <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
                 <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
-                    <Subheading>{tier.name}</Subheading>
-                    <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+                    <Subheading>{name}</Subheading>
+                    <p className="mt-2 text-sm/6 text-gray-950/75">{description}</p>
                     <div className="mt-8 flex items-center gap-4">
                         <div className="text-5xl font-medium text-gray-950">
-                            ${tier.priceMonthly}
+                            ₹{priceMonthly}
                         </div>
                         <div className="text-sm/5 text-gray-950/75">
-                            <p>USD</p>
+                            <p>INR</p>
                             <p>per month</p>
                         </div>
                     </div>
                     <div className="mt-8">
-                        <Button href={tier.href}>Start a free trial</Button>
+                        <Button href={href}>Start a free trial</Button>
                     </div>
                     <div className="mt-8">
                         <h3 className="text-sm/6 font-medium text-gray-950">
                             Start selling with:
                         </h3>
                         <ul className="mt-3 space-y-3">
-                            {tier.highlights.map((props, featureIndex) => (
+                            {highlights.map((props: any, featureIndex: any) => (
                                 <FeatureItem key={featureIndex} {...props} />
                             ))}
                         </ul>
@@ -165,16 +121,19 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
+
 function PricingCards() {
+    const { currentPackage } = usePricingContext() as any;
+
     return (
         <div className="relative py-20">
             <Gradient className="absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset ring-black/5" />
             <Container className="relative">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                    {tiers.map((tier, tierIndex) => (
+                    {currentPackage.tiers.map((tier: any, tierIndex: number) => (
                         <PricingCard key={tierIndex} tier={tier} />
                     ))}
                 </div>
@@ -186,9 +145,10 @@ function PricingCards() {
 
 export default function Pricing() {
     return (
-        <div className="pt-10 pb-24">
+        <PricingProvider>
             <PricingHeader />
+            <Tabs />
             <PricingCards />
-        </div>
+        </PricingProvider>
     )
 }
