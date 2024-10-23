@@ -1,5 +1,7 @@
 'use client'
 import { Button } from '@/components/button'
+import CalMeeting from '@/components/cal'
+import ContactTabs from '@/components/contact-tabs'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
@@ -29,15 +31,15 @@ function ContactHeader() {
     return (
         <div className="mt-10 lg:mt-14">
             <Subheading className="ml-1">Contact us</Subheading>
-            <Heading as="h1" className="mt-2">Let’s talk about your project</Heading>
+            <Heading as="h1" className="mt-2">Let&apos;s talk about your project</Heading>
             <Lead className="mt-6 max-w-3xl text-xl">
-                Reach out for sales inquiries, partnerships, or career opportunities. We're here to assist via email, phone, or our contact form. Let's connect!
+                Reach out for sales inquiries, partnerships, or career opportunities. We&apos;re here to assist via email, phone, or our contact form. Let&apos;s connect!
             </Lead>
         </div>
     )
 }
 
-export function ContactForm() {
+function ContactForm() {
     return (
         <div className="relative isolate bg-white ">
 
@@ -123,7 +125,7 @@ export function ContactForm() {
                                 Let’s talk
                             </button> */}
 
-                            <Button className={'w-32'}>Let's Talk</Button>
+                            <Button className={'w-32'}>Let&apos;s Talk</Button>
                         </div>
                     </form>
                     <div className="lg:mt-6 lg:w-80 lg:flex-none">
@@ -137,7 +139,7 @@ export function ContactForm() {
                                 </p>
                             </blockquote>
 
-                            <FounderBadge/>
+                            <FounderBadge />
                         </figure>
                     </div>
                 </div>
@@ -146,7 +148,7 @@ export function ContactForm() {
     )
 }
 
-const page = () => {
+function Page() {
     return (
         <div className=' flex flex-col relative overflow-x-hidden'>
             <Container className='h-full flex-1 relative'>
@@ -154,6 +156,8 @@ const page = () => {
                 <Navbar />
                 <main className="h-full my-10 pb-10  flex-1 relative">
                     <ContactHeader />
+                    {/* <ContactTabs/> */}
+                    <CalMeeting />
                     <ContactForm />
                 </main>
             </Container>
@@ -162,4 +166,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -4,7 +4,7 @@ import { Button } from "./button"
 import { Container } from "./container"
 import { Gradient } from "./gradient"
 import { LogoCloud } from "./logo-cloud"
-import Tabs from "./tabs"
+import Tabs from "./pricing-tabs"
 import { Heading, Lead, Subheading } from "./text"
 
 import defaultPackages from "@/utils/data/packages"
