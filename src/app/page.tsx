@@ -18,11 +18,12 @@ import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   description:
     'Radiant helps you sell more by revealing sensitive information about your customers.',
-}
+};
 
 function Hero() {
   return (
@@ -60,18 +61,18 @@ function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }
 
 function FoundersDesk() {
   return (
     <ExecutiveMessage
-      imageSrc='asd'
-      name='Rudransh Shrivastava'
-      quote=' lorem lorem lorem'
-      title='Founder & CEO'
+      imageSrc="asd"
+      name="Rudransh Shrivastava"
+      quote=" lorem lorem lorem"
+      title="Founder & CEO"
     />
-  )
+  );
 }
 
 function DummyImage() {
@@ -79,12 +80,12 @@ function DummyImage() {
     <div className="bg-gray-50 h-full flex items-center justify-center font-semibold">
       DUMMY IMG
     </div>
-  )
+  );
 }
 
 function BentoSection() {
   return (
-    <Container className=''>
+    <Container>
       <Subheading>What we offer</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
         We are doing only five things. but we make them as good as we can. that’s it.
@@ -94,29 +95,33 @@ function BentoSection() {
         <BentoCard
           eyebrow="Socials"
           title="Social Media Management"
-          description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
-          graphic={
-            // <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
-            <DummyImage />
-          }
+          description="We create engaging content, build authentic connections, and help you grow your brand’s presence across all social platforms."
+          graphic={<LogoCluster />}
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
           eyebrow="Graphics"
           title="Video Editing"
-          description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
+          description="Expert video editing that brings your vision to life, with creative storytelling and high-quality production for every project."
           graphic={
-            // <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
-            <DummyImage />
+            <Image
+              src="/offer/video-editing.jpg"
+              width={1000}
+              height={1000}
+              alt=""
+              className='w-full h-full object-contain'
+            />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
         />
+
+
         <BentoCard
           eyebrow="Development"
           title="Website & App Development"
-          description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
+          description="Innovative, user-friendly websites and apps tailored to your brand’s needs, ensuring smooth functionality and stunning design."
           graphic={
             <div className="flex size-full pl-10 pt-10">
               <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
@@ -127,78 +132,36 @@ function BentoSection() {
         <BentoCard
           eyebrow="Source"
           title="Linkedin Management"
-          description="Bypass those inconvenient privacy laws to source leads from the most unexpected places."
-          graphic={<LogoCluster />}
+          description="Elevate your professional profile and boost visibility with our strategic, results-driven LinkedIn management services."
+          graphic={
+            <Image
+              src="/offer/linkedin.jpg"
+              width={1000}
+              height={1000}
+              alt=""
+              className='w-full h-full object-contain'
+            />
+          }
           className="lg:col-span-2"
         />
         <BentoCard
           eyebrow="Limitless"
           title="Studio for rent"
-          description="Radiant helps you sell in locations currently under international embargo."
+          description="A fully-equipped studio, available for all your creative needs—photography, video shoots, and more, designed for professionals."
           graphic={
-            // <Map />
-            <DummyImage />
+            <Image
+              src="/offer/studio-rent.jpg"
+              width={1000}
+              height={1000}
+              alt=""
+              className='w-full h-full object-contain'
+            />
           }
           className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
         />
       </div>
     </Container>
-  )
-}
-
-function DarkBentoSection() {
-  return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
-      <Container>
-        <Subheading dark>Outreach</Subheading>
-        <Heading as="h3" dark className="mt-2 max-w-3xl">
-          Customer outreach has never been easier.
-        </Heading>
-
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-          <BentoCard
-            dark
-            eyebrow="Networking"
-            title="Sell at the speed of light"
-            description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/networking.png)] bg-[size:851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
-            className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
-          />
-          <BentoCard
-            dark
-            eyebrow="Integrations"
-            title="Meet leads where they are"
-            description="With thousands of integrations, no one will be able to escape your cold outreach."
-            graphic={<LogoTimeline />}
-            // `!overflow-visible` is needed to work around a Chrome bug that disables the mask on the graphic.
-            className="z-10 !overflow-visible lg:col-span-2 lg:rounded-tr-4xl"
-          />
-          <BentoCard
-            dark
-            eyebrow="Meetings"
-            title="Smart call scheduling"
-            description="Automatically insert intro calls into your leads' calendars without their consent."
-            graphic={<LinkedAvatars />}
-            className="lg:col-span-2 lg:rounded-bl-4xl"
-          />
-          <BentoCard
-            dark
-            eyebrow="Engagement"
-            title="Become a thought leader"
-            description="RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales, helping you build a reputation as a thought leader."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
-            className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
-          />
-        </div>
-      </Container>
-    </div>
-  )
+  );
 }
 
 export default function Home() {
@@ -206,19 +169,14 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        {/* <Container className="mt-10">
-          <LogoCloud />
-        </Container> */}
         <div className="bg-gradient-to-b from-white from-50% to-gray-100 py-32">
-          {/* <FeatureSection /> */}
           <BentoSection />
         </div>
-        {/* <DarkBentoSection /> */}
       </main>
       <Testimonials />
       <Pricing />
       <FoundersDesk />
       <Footer />
     </div>
-  )
+  );
 }

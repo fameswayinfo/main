@@ -59,8 +59,7 @@ function PricingHeader() {
             <Subheading className="ml-1">Pricing</Subheading>
             <Heading as="h1" className="mt-2">Pricing that grows with your team size.</Heading>
             <Lead className="mt-6 max-w-3xl text-xl">
-                Companies all over the world have closed millions of deals with Radiant.
-                Sign up today and start selling smarter.
+                {"Flexible pricing that scales with your business needs—whether you're a small startup or an expanding team, we have a plan for you."}
             </Lead>
         </Container>
     )

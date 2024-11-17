@@ -23,7 +23,7 @@ const testimonials = [
     name: 'Tina Yards',
     title: 'VP of Sales, Protocol',
     quote:
-      'Thanks to Radiant, we’re finding new leads that we never would have found with legal methods.',
+      'Famesway transformed our video content with expert editing and timely uploads!',
   },
   {
     img: '/testimonials/conor-neville.jpg',

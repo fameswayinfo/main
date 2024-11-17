@@ -18,28 +18,18 @@ export const metadata: Metadata = {
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Helping companies generate revenue.</Heading>
+      <Heading as="h1">Your Brand, Our Focus </Heading>
       <Lead className="mt-6 max-w-3xl">
-        We’re on a mission to transform revenue organizations by harnessing vast
-        amounts of illegally acquired customer data.
+        We’re a fresh, fearless team that shapes the digital landscape with bold ideas and smart strategies.
       </Lead>
       <section className="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-lg">
           <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
           <p className="mt-6 text-sm/6 text-gray-600">
-            At Radiant, we are dedicated to transforming the way revenue
-            organizations source and close deals. Our mission is to provide our
-            customers with an unfair advantage over both their competitors and
-            potential customers through insight and analysis. We’ll stop at
-            nothing to get you the data you need to close a deal.
+          At Famesway, we are redefining the boundaries of creativity and innovation. Founded on the visionary ideals of <strong>Rudransh Shrivastava</strong>, our mission is to revolutionize the digital landscape with bold and transformative solutions. We blend cutting-edge technology, strategic insights, and unmatched creativity to connect brands with the ever-evolving world of digital natives. Famesway isn’t just an agency—it’s a movement driven by passion, purpose, and a relentless pursuit of excellence, empowering businesses to thrive in an era where innovation meets opportunity.
           </p>
           <p className="mt-8 text-sm/6 text-gray-600">
-            We’re customer-obsessed — putting the time in to build a detailed
-            financial picture of every one of our customers so that we know more
-            about your business than you do. We are in this together, mostly
-            because we are all implicated in large-scale financial crime. In our
-            history as a company, we’ve never lost a customer, because if any
-            one of us talks, we all go down.
+          To empower businesses and creators by delivering exceptional editing, studio podcast production, web development, and social media marketing services. We aim to transform visions into impactful digital experiences, ensuring every story, brand, and message reaches its fullest potential with creativity and precision.
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -58,7 +48,7 @@ function Header() {
                 className="block size-full object-cover"
               />
             </div>
-            
+
           </div>
         </div>
         {/* <div className="max-lg:mt-16 lg:col-span-1">
