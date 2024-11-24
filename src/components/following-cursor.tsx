@@ -19,7 +19,7 @@ const Cursor = () => {
 
     return (
         <motion.div
-            className="fixed w-2.5 h-2.5 bg-black  rounded-full pointer-events-none z-[99999999999] md:block"
+            className="fixed w-2.5 h-2.5 bg-black  rounded-full pointer-events-none z-[99999999999] md:block hidden"
             animate={{
                 x: mousePosition.x - 5,
                 y: mousePosition.y - 5
