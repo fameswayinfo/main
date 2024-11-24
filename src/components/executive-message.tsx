@@ -2,10 +2,10 @@ import Image from "next/image";
 import { Container } from "./container";
 
 function ExecutiveMessage({
-    imageSrc = '',
-    quote = 'Hey',
+    imageSrc = '/rudransh.png',
+    quote = 'Rudransh Shrivastava is a seasoned Business Analyst and Social Media Expert with extensive experience in building businesses, enhancing their digital presence, and scaling them effectively through strategic digital solutions. He possesses sound knowledge in Excel, SQL, Power BI, and Tableau, enabling data-driven decision-making and impactful business insights.',
     name = 'Rudransh Shrivastava',
-    title = 'asd'
+    title = 'Founder & CEO'
 }: {
     imageSrc?: string,
     quote?: string,
@@ -15,7 +15,7 @@ function ExecutiveMessage({
 
     console.log(imageSrc)
     return (
-        <div className="mx-2 my-24 rounded-4xl bg-gray-900 bg-[url(/dot-texture.svg)] pb-12 pt-72 lg:pt-12">
+        <div className="mx-2 my-10 rounded-4xl bg-gray-900 bg-[url(/dot-texture.svg)] pb-12 pt-16 lg:pt-12">
             <Container>
                 <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
                     <div className="">
@@ -26,7 +26,7 @@ function ExecutiveMessage({
                                         width={1000}
                                         height={1000}
                                         alt="founder-img"
-                                        src={'/rudransh.png'}
+                                        src={imageSrc}
                                         className="aspect-[3/4] w-full object-cover "
                                     />
                                 </div>
@@ -34,9 +34,9 @@ function ExecutiveMessage({
                         </div>
                     </div>
                     <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16 ">
-                        <figure className="flex max-w-2xl flex-col gap-16 max-lg:text-center self-center">
+                        <figure className="flex max-w-2xl flex-col gap-12 max-lg:text-center self-center">
                             <blockquote>
-                                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-2xl">
+                                <p className="relative text-xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-2xl">
                                     {quote}
                                 </p>
                             </blockquote>

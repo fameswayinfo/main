@@ -26,10 +26,10 @@ function Header() {
         <div className="max-w-lg">
           <h2 className="text-2xl font-medium tracking-tight">Our mission</h2>
           <p className="mt-6 text-sm/6 text-gray-600">
-          At Famesway, we are redefining the boundaries of creativity and innovation. Founded on the visionary ideals of <strong>Rudransh Shrivastava</strong>, our mission is to revolutionize the digital landscape with bold and transformative solutions. We blend cutting-edge technology, strategic insights, and unmatched creativity to connect brands with the ever-evolving world of digital natives. Famesway isn’t just an agency—it’s a movement driven by passion, purpose, and a relentless pursuit of excellence, empowering businesses to thrive in an era where innovation meets opportunity.
+            At Famesway, we are redefining the boundaries of creativity and innovation. Founded on the visionary ideals of <strong>Rudransh Shrivastava</strong>, our mission is to revolutionize the digital landscape with bold and transformative solutions. We blend cutting-edge technology, strategic insights, and unmatched creativity to connect brands with the ever-evolving world of digital natives. Famesway isn’t just an agency—it’s a movement driven by passion, purpose, and a relentless pursuit of excellence, empowering businesses to thrive in an era where innovation meets opportunity.
           </p>
           <p className="mt-8 text-sm/6 text-gray-600">
-          To empower businesses and creators by delivering exceptional editing, studio podcast production, web development, and social media marketing services. We aim to transform visions into impactful digital experiences, ensuring every story, brand, and message reaches its fullest potential with creativity and precision.
+            To empower businesses and creators by delivering exceptional editing, studio podcast production, web development, and social media marketing services. We aim to transform visions into impactful digital experiences, ensuring every story, brand, and message reaches its fullest potential with creativity and precision.
           </p>
         </div>
         <div className="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
@@ -93,7 +93,7 @@ function Team() {
     <Container className="mt-32 pb-24">
       <Subheading>Meet the team</Subheading>
       <Heading as="h3" className="mt-2">
-        Founded by an all-star team.
+        Founded by an All-Star Team
       </Heading>
       <Lead className="mt-6 max-w-3xl">
         famesway is founded by two of the best sellers in the business and backed
@@ -102,20 +102,10 @@ function Team() {
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="max-w-lg">
           <p className="text-sm/6 text-gray-600">
-            Years ago, while working as sales associates at rival companies,
-            Thomas, Ben, and Natalie were discussing a big client they had all
-            been competing for. Joking about seeing the terms of each other’s
-            offers, they had an idea: what if they shared data to win deals and
-            split the commission behind their companies’ backs? It turned out to
-            be an incredible success, and that idea became the kernel for
-            famesway.
+          At Famesway, our team is the driving force behind our creative media marketing excellence. With a combination of diverse skills and expertise, we craft innovative strategies that elevate your brand’s story. Our leadership sets the strategic direction, ensuring that we stay ahead of trends and deliver impactful results.
           </p>
           <p className="mt-8 text-sm/6 text-gray-600">
-            Today, famesway transforms revenue organizations by harnessing
-            illegally acquired customer and competitor data, using it to provide
-            extraordinary leverage. More than 30,000 companies rely on famesway
-            to undercut their competitors and extort their customers, all
-            through a single integrated platform.
+          Our creative team, consisting of designers, content creators, and storytellers, brings your brand’s vision to life with stunning visuals and engaging content. Our social media experts build dynamic campaigns that drive engagement, growth, and brand loyalty. Behind the scenes, our tech team ensures seamless execution, creating high-quality content, from videos to interactive digital experiences. Together, we turn creative ideas into measurable success across every platform.
           </p>
           <div className="mt-6">
             <Button className="w-full sm:w-auto" href="#">
@@ -141,51 +131,45 @@ function Team() {
         role="list"
         className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
       >
+
         <Person
-          name="Michael Foster"
-          description="Co-Founder / CTO"
-          img="/team/michael-foster.jpg"
+          name="Rudransh Shrivastava"
+          description="Founder & CEO"
+          img="/rudransh.png"
         />
+
+
         <Person
-          name="Dries Vincent"
-          description="Business Relations"
-          img="/team/dries-vincent.jpg"
+          name="Bhoomi Joshi"
+          description="Business / Social Media Manager"
+          img="/team/bhoomi-joshi.jpg"
         />
+
         <Person
-          name="Celeste Vandermark"
-          description="Front-end Developer"
-          img="/team/celeste-vandermark.jpg"
+          name="Swastika Mukherjee"
+          description="Graphic Desginer"
+          img="/team/swastika.jpg"
         />
+
         <Person
-          name="Courtney Henry"
-          description="Designer"
-          img="/team/courtney-henry.jpg"
+          name="Anuj Upadhyay"
+          description="Video Editor"
+          img="/team/anuj-updadhyay.jpg"
         />
+
         <Person
-          name="Marcus Eldridge"
-          description="Director of Product"
-          img="/team/marcus-eldridge.jpg"
+          name="Sanidhya Shrivastava"
+          description="Video Editor"
+          img="/team/sanidhya.jpg"
         />
+
         <Person
-          name="Whitney Francis"
-          description="Copywriter"
-          img="/team/whitney-francis.jpg"
+          name="Anuj Nema"
+          description="Fullstack Developer"
+          img="/team/anuj.jpg"
         />
-        <Person
-          name="Leonard Krasner"
-          description="Senior Designer"
-          img="/team/leonard-krasner.jpg"
-        />
-        <Person
-          name="Nolan Sheffield"
-          description="Principal Designer"
-          img="/team/nolan-sheffield.jpg"
-        />
-        <Person
-          name="Emily Selman"
-          description="VP, User Experience"
-          img="/team/emily-selman.jpg"
-        />
+
+
       </ul>
     </Container>
   )

@@ -67,7 +67,7 @@ function Hero() {
 function FoundersDesk() {
   return (
     <ExecutiveMessage
-      imageSrc="testimonial/rudransh.png"
+      imageSrc="/rudransh.png"
       name="Rudransh Shrivastava"
       quote="Rudransh Shrivastava is a seasoned Business Analyst and Social Media Expert with extensive experience in building businesses, enhancing their digital presence, and scaling them effectively through strategic digital solutions. He possesses sound knowledge in Excel, SQL, Power BI, and Tableau, enabling data-driven decision-making and impactful business insights."
       title="Founder & CEO"
