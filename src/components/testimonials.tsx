@@ -19,47 +19,73 @@ import { Heading, Subheading } from './text'
 
 const testimonials = [
   {
-    img: '/testimonials/tina-yards.jpg',
-    name: 'Tina Yards',
-    title: 'VP of Sales, Protocol',
-    quote:
-      'Famesway transformed our video content with expert editing and timely uploads!',
+    img: '/testimonials/rocky-mohan.jpg',
+    name: 'Rocky Mohan',
+    title: 'Old Monk Ambassador',
+    quote: 'Famesway transformed our video content with expert editing and timely uploads!',
   },
   {
-    img: '/testimonials/conor-neville.jpg',
-    name: 'Conor Neville',
-    title: 'Head of Customer Success, TaxPal',
-    quote:
-      'Radiant made undercutting all of our competitors an absolute breeze.',
+    img: '/testimonials/digraj-singh-rajput.jpg',
+    name: 'Digraj Singh Rajput',
+    title: 'Co-founder of Next Toppers',
+    quote: 'Their video editing and YouTube management significantly boosted our channel\'s reach!',
   },
-  // {
-  //   img: '/testimonials/amy-chase.jpg',
-  //   name: 'Amy Chase',
-  //   title: 'Head of GTM, Pocket',
-  //   quote:
-  //     'We closed a deal in literally a few minutes because we knew their exact budget.',
-  // },
-  // {
-  //   img: '/testimonials/veronica-winton.jpg',
-  //   name: 'Veronica Winton',
-  //   title: 'CSO, Planeteria',
-  //   quote:
-  //     'We’ve managed to put two of our main competitors out of business in 6 months.',
-  // },
-  // {
-  //   img: '/testimonials/dillon-lenora.jpg',
-  //   name: 'Dillon Lenora',
-  //   title: 'VP of Sales, Detax',
-  //   quote: 'I was able to replace 80% of my team with RadiantAI bots.',
-  // },
-  // {
-  //   img: '/testimonials/harriet-arron.jpg',
-  //   name: 'Harriet Arron',
-  //   title: 'Account Manager, Commit',
-  //   quote:
-  //     'I’ve smashed all my targets without having to speak to a lead in months.',
-  // },
-]
+  {
+    img: '/testimonials/dr-farhat-khan.jpg',
+    name: 'Dr. Farhat Khan',
+    title: 'Dermatologist',
+    quote: 'Their professional shoots captured our work beautifully—highly recommended!',
+  },
+  {
+    img: '/testimonials/dr-amit-pandey.webp',
+    name: 'Dr. Amit Pandey',
+    title: 'Dermatologist',
+    quote: 'Famesway\'s shoots and social media management increased our patient engagement!',
+  },
+
+  {
+    img: '/testimonials/hospitalble-couch.jpg',
+    name: 'Hospitable couch',
+    title: 'Organization',
+    quote: 'Professional shoots and social media management have elevated our brand presence!',
+  },
+  {
+    img: '/testimonials/lake-view-nursery.jpg',
+    name: 'Lake View Nursery ',
+    title: 'Plant Nursey',
+    quote: 'Famesway\'s professional shoots showcased our nursery perfectly. A fantastic !',
+  },
+  {
+    img: '/testimonials/enchante-salon.jpg',
+    name: 'Enchante Salon ',
+    title: 'Unisex Salon',
+    quote: 'Their professional shoots highlighted our services beautifully. Excellent work!',
+  },
+  {
+    img: '/testimonials/dr-sweta.jpg',
+    name: 'Dr. Sweta',
+    title: 'Dermatologist',
+    quote: 'Expert shoots and social media management helped us connect with more clients!',
+  },
+  {
+    img: '/testimonials/namaste-mytho.jpg',
+    name: 'Namaste Mytho',
+    title: 'Social Media Page',
+    quote: 'Famesway\'s video editing and social media management truly brought my vision to life!',
+  },
+  {
+    img: '/testimonials/bo-tree.jpg',
+    name: 'Bo Tree',
+    title: 'Therapy center',
+    quote: 'The carousel and posts created by Famesway effectively showcased our offerings!',
+  },
+  {
+    img: '/testimonials/divine-cosmetic.jpg',
+    name: 'Divine Cosmetic Clinic',
+    title: 'Skincare Organization',
+    quote: 'Their professional shoots and edits have elevated my online presence significantly!',
+  },
+];
 
 function TestimonialCard({
   name,
@@ -118,11 +144,11 @@ function TestimonialCard({
       {...props}
       className="relative flex aspect-[9/16] w-72 shrink-0 snap-start scroll-ml-[var(--scroll-padding)] flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[3/4] sm:w-96"
     >
-      {/* <img
+      <img
         alt=""
         src={img}
         className="absolute inset-x-0 top-0 aspect-square w-full object-cover"
-      /> */}
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] ring-1 ring-inset ring-gray-950/10 sm:from-25%"
@@ -155,13 +181,12 @@ function TestimonialCard({
 function CallToAction() {
   return (
     <div>
-      <p className="max-w-sm text-sm/6 text-gray-600">
-        Join the best sellers in the business and start using Radiant to hit
-        your targets today.
+      <p className="max-w-lg text-sm/6 text-gray-600">
+        Join us to elevate your brand with stunning shoots, engaging social media, cutting-edge websites, and powerful digital marketing!
       </p>
       <div className="mt-2">
         <Link
-          href="#"
+          href="/contact"
           className="inline-flex items-center gap-2 text-sm/6 font-medium text-pink-600"
         >
           Get started

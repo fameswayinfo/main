@@ -12,17 +12,16 @@ function CallToAction() {
       <hgroup>
         <Subheading>Get started</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to dive in?
+          Ready to get started?
           <br />
           Start your free trial today.
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
+      Your Story, Our Canvas, Media Magic – Where Creativity Brings Your Brand to Life.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
+        <Button className="w-full sm:w-auto" href="/contact">
           Get started
         </Button>
       </div>
@@ -148,7 +147,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} Radiant Inc.
+      &copy; {new Date().getFullYear()} famesway Inc.
     </div>
   )
 }

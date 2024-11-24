@@ -22,7 +22,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   description:
-    'Radiant helps you sell more by revealing sensitive information about your customers.',
+    'famesway helps you sell more by revealing sensitive information about your customers.',
 };
 
 function Hero() {
@@ -33,7 +33,7 @@ function Hero() {
         <Navbar
           banner={
             <Link
-              href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
+              href="/blog/famesway-raises-100m-series-a-from-tailwind-ventures"
               className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-[hover]:bg-fuchsia-950/30"
             >
               Grab! A free video editing Trial
@@ -67,9 +67,9 @@ function Hero() {
 function FoundersDesk() {
   return (
     <ExecutiveMessage
-      imageSrc="asd"
+      imageSrc="testimonial/rudransh.png"
       name="Rudransh Shrivastava"
-      quote=" lorem lorem lorem"
+      quote="Rudransh Shrivastava is a seasoned Business Analyst and Social Media Expert with extensive experience in building businesses, enhancing their digital presence, and scaling them effectively through strategic digital solutions. He possesses sound knowledge in Excel, SQL, Power BI, and Tableau, enabling data-driven decision-making and impactful business insights."
       title="Founder & CEO"
     />
   );
