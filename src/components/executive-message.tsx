@@ -3,7 +3,7 @@ import { Container } from "./container";
 
 function ExecutiveMessage({
     imageSrc = '/rudransh.png',
-    quote = 'Rudransh Shrivastava is a seasoned Business Analyst and Social Media Expert with extensive experience in building businesses, enhancing their digital presence, and scaling them effectively through strategic digital solutions. He possesses sound knowledge in Excel, SQL, Power BI, and Tableau, enabling data-driven decision-making and impactful business insights.',
+    quote = 'Rudransh Shrivastava is a seasoned Business Analyst and Social Media Expert with extensive experience in building businesses, enhancing their digital presence, and scaling them effectively through strategic digital solutions. He possesses sound knowledge in Excel, SQL, Power BI, and Tableau, enabling data-driven decision-making and impactful business insights. Additionally, he is an expert in Meta Ads and Google Ads, leveraging targeted advertising to drive growth and maximize ROI.',
     name = 'Rudransh Shrivastava',
     title = 'Founder & CEO'
 }: {
