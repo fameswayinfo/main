@@ -1,3 +1,4 @@
+import Cursor from '@/components/following-cursor'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
@@ -27,7 +28,10 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+        <Cursor/>
+        {children}
+      </body>
     </html>
   )
 }
