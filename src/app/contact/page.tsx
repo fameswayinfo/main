@@ -16,8 +16,8 @@ const FounderBadge = () => {
         <figcaption className="mt-10 flex gap-x-6">
             <img
                 alt=""
-                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
-                className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                src="/rudransh.png"
+                className="h-12 w-12 object-cover flex-none rounded-full bg-gray-50"
             />
             <div>
                 <div className="text-base font-semibold text-gray-900">Rudransh Shrivastava</div>
@@ -130,12 +130,11 @@ function ContactForm() {
                     </form>
                     <div className="lg:mt-6 lg:w-80 lg:flex-none">
                         {/* <img alt="asd" src="" className="h-12 w-auto" /> */}
-                        <div className="h-12 w-auto border text-center">Logo Here</div>
+                        {/* <div className="h-12 w-auto border text-center">Logo Here</div> */}
                         <figure className="mt-10">
                             <blockquote className="text-lg font-semibold leading-8 text-gray-900">
                                 <p>
-                                    “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                                    molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+                                    “Got a project in mind or need assistance? Our team at Famesway is ready to help bring your brand vision to life. Fill out the form below, and lets start crafting something amazing together! We look forward to connecting with you.”
                                 </p>
                             </blockquote>
 

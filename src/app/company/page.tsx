@@ -92,7 +92,7 @@ function Team() {
   return (
     <Container className="mt-32 pb-24">
       <Subheading>Meet the team</Subheading>
-      <Heading as="h3" className="mt-2">
+      {/* <Heading as="h3" className="mt-2">
         Founded by an All-Star Team
       </Heading>
       <Lead className="mt-6 max-w-3xl">
@@ -102,10 +102,10 @@ function Team() {
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="max-w-lg">
           <p className="text-sm/6 text-gray-600">
-          At Famesway, our team is the driving force behind our creative media marketing excellence. With a combination of diverse skills and expertise, we craft innovative strategies that elevate your brand’s story. Our leadership sets the strategic direction, ensuring that we stay ahead of trends and deliver impactful results.
+            At Famesway, our team is the driving force behind our creative media marketing excellence. With a combination of diverse skills and expertise, we craft innovative strategies that elevate your brand’s story. Our leadership sets the strategic direction, ensuring that we stay ahead of trends and deliver impactful results.
           </p>
           <p className="mt-8 text-sm/6 text-gray-600">
-          Our creative team, consisting of designers, content creators, and storytellers, brings your brand’s vision to life with stunning visuals and engaging content. Our social media experts build dynamic campaigns that drive engagement, growth, and brand loyalty. Behind the scenes, our tech team ensures seamless execution, creating high-quality content, from videos to interactive digital experiences. Together, we turn creative ideas into measurable success across every platform.
+            Our creative team, consisting of designers, content creators, and storytellers, brings your brand’s vision to life with stunning visuals and engaging content. Our social media experts build dynamic campaigns that drive engagement, growth, and brand loyalty. Behind the scenes, our tech team ensures seamless execution, creating high-quality content, from videos to interactive digital experiences. Together, we turn creative ideas into measurable success across every platform.
           </p>
           <div className="mt-6">
             <Button className="w-full sm:w-auto" href="#">
@@ -125,7 +125,7 @@ function Team() {
       </div>
       <Subheading as="h3" className="mt-24">
         The team
-      </Subheading>
+      </Subheading> */}
       <hr className="mt-6 border-t border-gray-200" />
       <ul
         role="list"
@@ -146,10 +146,12 @@ function Team() {
         />
 
         <Person
-          name="Swastika Mukherjee"
-          description="Graphic Desginer"
-          img="/team/swastika.jpg"
+          name="Anuj Nema"
+          description="Fullstack Developer"
+          img="/team/anuj.jpg"
         />
+
+
 
         <Person
           name="Anuj Upadhyay"
@@ -164,11 +166,27 @@ function Team() {
         />
 
         <Person
-          name="Anuj Nema"
-          description="Fullstack Developer"
-          img="/team/anuj.jpg"
+          name="Nawaz"
+          description="Video Editor"
+          img="/team/nawaz.jpg"
         />
 
+        <Person
+          name="Swastika Mukherjee"
+          description="Graphic Desginer"
+          img="/team/swastika.jpg"
+        />
+
+        <Person
+          name="Urvi Mundra"
+          description="Social Media Manager"
+          img="/team/urvi-moondra.jpg"
+        />
+        <Person
+          name="Shweta Roy"
+          description="Graphic Designer / UI/UX Designer"
+          img="/team/shweta.jpg"
+        />
 
       </ul>
     </Container>
