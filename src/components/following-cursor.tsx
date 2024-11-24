@@ -1,11 +1,11 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Cursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const handleMouseMove = (e: any) => {
             setMousePosition({
                 x: e.clientX,
@@ -19,7 +19,7 @@ const Cursor = () => {
 
     return (
         <motion.div
-            className="fixed w-2.5 h-2.5 bg-black  rounded-full pointer-events-none z-[99999999999]"
+            className="fixed w-2.5 h-2.5 bg-black  rounded-full pointer-events-none z-[99999999999] md:block"
             animate={{
                 x: mousePosition.x - 5,
                 y: mousePosition.y - 5
@@ -28,7 +28,7 @@ const Cursor = () => {
                 type: "spring",
                 stiffness: 500,
                 damping: 28,
-                mass: 0.5
+                mass: 0.2
             }}
         />
     );
