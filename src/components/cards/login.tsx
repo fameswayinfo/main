@@ -5,6 +5,7 @@ import { Mark } from '../logo'
 import { Button } from '../button'
 import { signIn } from 'next-auth/react'
 import { FcGoogle } from 'react-icons/fc'
+import { Heading } from '../text'
 
 const LoginCard = ({ title = "Welcome back!", description = 'Sign in to your account to continue.' }: { title?: string, description?: string }) => {
   const handleLogin = async (loginType: string) => {
@@ -16,10 +17,11 @@ const LoginCard = ({ title = "Welcome back!", description = 'Sign in to your acc
         <form action="#" method="POST" className="p-7 sm:p-11">
           <div className="flex items-start">
             <Link href="/" title="Home">
-              <Mark className="h-9 fill-black" />
+              {/* <Mark className="h-9 fill-black" /> */}
+              <h2  className='sm:text-xl text-lg font-semibold'>Famesway</h2>
             </Link>
           </div>
-          <h1 className="mt-8 text-base/6 font-medium">{title}</h1>
+          <h1 className="mt-8 h2-base/6 font-medium">{title}</h1>
           <p className="mt-1 text-sm/5 text-gray-600">
             {description}
           </p>
