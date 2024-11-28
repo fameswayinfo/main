@@ -1,6 +1,7 @@
 import Cursor from '@/components/following-cursor'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import { SessionProvider } from 'next-auth/react'
 
 export const metadata: Metadata = {
   title: {
@@ -29,8 +30,10 @@ export default function RootLayout({
         />
       </head>
       <body className="text-gray-950 antialiased">
-        <Cursor/>
-        {children}
+        <SessionProvider>
+          <Cursor />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   )

@@ -20,12 +20,16 @@ import { ChevronRightIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+import { auth, signOut } from "@/auth";
+
+
 export const metadata: Metadata = {
   description:
     'famesway helps you sell more by revealing sensitive information about your customers.',
 };
 
 function Hero() {
+
   return (
     <div className="relative">
       <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />

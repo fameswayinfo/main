@@ -11,6 +11,8 @@ import { Link } from './link'
 import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 import { Heading } from './text'
+import { useSession } from 'next-auth/react'
+import AuthDropdown from './auth-dropdown'
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
@@ -20,6 +22,8 @@ const links = [
 ]
 
 function DesktopNav() {
+  const { data, status } = useSession()
+  console.log(status)
   return (
     <nav className="relative hidden lg:flex">
       {links.map(({ href, label }) => (
@@ -32,6 +36,43 @@ function DesktopNav() {
           </Link>
         </PlusGridItem>
       ))}
+
+      <PlusGridItem className="relative flex">
+        <div
+          className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-[hover]:bg-black/[2.5%]"
+        >
+          {status === 'loading' ? (
+            "Loading ..."
+          ) : status === 'authenticated' ? (
+            <>
+              <span className='font-semibold'>
+                {/* Hello 👋 {data?.user?.name} */}
+                <AuthDropdown/>
+              </span>
+
+            </>
+          ) :
+
+            <Link
+              href={'/login'}
+            >
+              Login
+            </Link>}
+        </div>
+      </PlusGridItem>
+
+      {/* <PlusGridItem className="relative flex">
+        {status  ? <div>Loading</div> ?
+          <div>
+            {`Hello 👋 ${data?.user?.name}`}
+          </div> :
+          <Link
+            href={'/login'}
+            className="flex items-center px-4 py-3 text-base font-medium text-gray-950 bg-blend-multiply data-[hover]:bg-black/[2.5%]"
+          >
+            Login
+          </Link>}
+      </PlusGridItem> */}
     </nav>
   )
 }
@@ -94,7 +135,7 @@ export function Navbar({ banner }: { banner?: React.ReactNode }) {
                 {banner}
               </div>
             )}
-          </div> 
+          </div>
           <DesktopNav />
           <MobileNavButton />
         </PlusGridRow>

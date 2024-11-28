@@ -10,6 +10,8 @@ import { Heading, Lead, Subheading } from "./text"
 import defaultPackages from "@/utils/data/packages"
 import '@/utils/helper';
 import PlusIcon from "./icons/plus-icon"
+import { useSession } from "next-auth/react"
+import LoginCard from "./cards/login"
 
 type PricingContext = {
     handleChangePackageTab: (id: number) => void;
@@ -126,17 +128,26 @@ function PricingCard({ tier }: { tier: any }) {
 
 function PricingCards() {
     const { currentPackage } = usePricingContext() as any;
+    const { status } = useSession()
 
     return (
         <div className="relative py-20">
-            <Gradient className="absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset ring-black/5" />
+            <Gradient className="absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset ring-black/10" />
+            {status === 'unauthenticated' && <div className="absolute inset-0 z-10 h-full flex items-center justify-center backdrop-blur-xl w-full">
+                <LoginCard
+                    title="Please login to view pricing"
+                />
+            </div>}
             <Container className="relative">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     {currentPackage.tiers.map((tier: any, tierIndex: number) => (
                         <PricingCard key={tierIndex} tier={tier} />
+                        // <div className="" key={tier.index}></div>
                     ))}
                 </div>
                 {/* <LogoCloud className="mt-24" /> */}
+
+
             </Container>
         </div>
     )
