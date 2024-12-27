@@ -146,14 +146,6 @@ function Team() {
         />
 
         <Person
-          name="Anuj Nema"
-          description="Fullstack Developer"
-          img="/team/anuj.jpg"
-        />
-
-
-
-        <Person
           name="Anuj Upadhyay"
           description="Video Editor"
           img="/team/anuj-updadhyay.jpg"
