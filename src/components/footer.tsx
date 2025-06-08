@@ -18,7 +18,7 @@ function CallToAction() {
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-      Your Story, Our Canvas, Media Magic – Where Creativity Brings Your Brand to Life.
+        Your Story, Our Canvas, Media Magic – Where Creativity Brings Your Brand to Life.
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="/contact">
@@ -51,14 +51,6 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
 function Sitemap() {
   return (
     <>
-      {/* <div>
-        <SitemapHeading>Product</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
-        </SitemapLinks>
-      </div> */}
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
@@ -67,15 +59,8 @@ function Sitemap() {
           <SitemapLink href="/company">Company</SitemapLink>
         </SitemapLinks>
       </div>
-      {/* <div>
-        <SitemapHeading>Support</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
-        </SitemapLinks>
-      </div> */}
       <div>
-        <SitemapHeading>Company</SitemapHeading>
+        <SitemapHeading>Legal</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="#">Terms of service</SitemapLink>
           <SitemapLink href="#">Privacy policy</SitemapLink>
@@ -152,6 +137,14 @@ function Copyright() {
   )
 }
 
+function Credits() {
+  return (
+    <div className="text-sm/6 text-gray-500">
+      Crafted by: <Link target='_blank' href="https://github.com/anujnema5" className="text-gray-950 hover:text-gray-950/75 font-medium">Anuj Nema </Link>
+    </div>
+  )
+}
+
 export function Footer() {
   return (
     <footer>
@@ -172,18 +165,27 @@ export function Footer() {
                 </div>
               </div>
             </PlusGridRow>
-            <PlusGridRow className="flex justify-between">
-              <div>
-                <PlusGridItem className="py-3">
-                  <Copyright />
-                </PlusGridItem>
-              </div>
-              <div className="flex">
-                <PlusGridItem className="flex items-center gap-8 py-3">
-                  <SocialLinks />
-                </PlusGridItem>
-              </div>
+            
+            {/* Bottom section - Mobile first responsive */}
+            <PlusGridRow>
+              <PlusGridItem className="py-6">
+                <div className="flex flex-col space-y-4 text-center sm:text-left lg:flex-row lg:justify-between lg:items-center lg:space-y-0">
+                  
+                  {/* Left side - Copyright and Credits */}
+                  <div className="flex flex-col space-y-2 items-center sm:items-start lg:flex-row lg:items-center lg:space-y-0 lg:space-x-6">
+                    <Credits />
+                    <Copyright />
+                  </div>
+                  
+                  {/* Right side - Social Links */}
+                  <div className="flex justify-center gap-6 lg:justify-end">
+                    <SocialLinks />
+                  </div>
+                  
+                </div>
+              </PlusGridItem>
             </PlusGridRow>
+
           </PlusGrid>
         </Container>
       </Gradient>
