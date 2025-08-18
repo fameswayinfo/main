@@ -419,7 +419,7 @@ export default function Company() {
         <Navbar />
       </Container>
       <Header />
-      <Team />
+      {/* <Team /> */}
       {/* <Investors /> */}
       {/* <Careers /> */}
       <ExecutiveMessage />
