@@ -29,7 +29,6 @@ export const metadata: Metadata = {
 };
 
 function Hero() {
-
   return (
     <div className="relative">
       <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
@@ -40,26 +39,22 @@ function Hero() {
               href="/contact"
               className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-[hover]:bg-fuchsia-950/30"
             >
-              Grab! A free video editing Trial
+              🚀 Transform your clinic today
               <ChevronRightIcon className="size-4" />
             </Link>
           }
         />
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 md:pb-48 md:pt-32">
           <h1 className="font-display text-balance text-6xl/[0.9] font-medium tracking-tight text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.9]">
-            We’re a full-service
-            digital studio.
+            We power clinics with tech & social.
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            A small team
-            with big ideas. We have the variety
-            of an agency and the expertise
-            of a studio.
+            From cutting-edge technology to viral social media - we handle it all so you can focus on patients.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="/contact">Get started</Button>
+            <Button href="/contact">{"Let's talk"}</Button>
             <Button variant="secondary" href="/pricing">
-              See pricing
+              View packages
             </Button>
           </div>
         </div>
@@ -67,7 +62,6 @@ function Hero() {
     </div>
   );
 }
-
 function FoundersDesk() {
   return (
     <ExecutiveMessage
@@ -97,6 +91,17 @@ function BentoSection() {
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
+          eyebrow="Development"
+          title="Website & App Development"
+          description="Innovative, user-friendly websites and apps tailored to your brand’s needs, ensuring smooth functionality and stunning design."
+          graphic={
+            <div className="flex size-full pl-10 pt-10">
+              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
+            </div>
+          }
+          className="lg:col-span-3 lg:rounded-bl-4xl"
+        />
+        <BentoCard
           eyebrow="Socials"
           title="Social Media Management"
           description="We create engaging content, build authentic connections, and help you grow your brand’s presence across all social platforms."
@@ -118,21 +123,11 @@ function BentoSection() {
             />
           }
           fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
+          className="lg:col-span-2 lg:rounded-tr-4xl"
         />
 
 
-        <BentoCard
-          eyebrow="Development"
-          title="Website & App Development"
-          description="Innovative, user-friendly websites and apps tailored to your brand’s needs, ensuring smooth functionality and stunning design."
-          graphic={
-            <div className="flex size-full pl-10 pt-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
-            </div>
-          }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
-        />
+        
         <BentoCard
           eyebrow="Source"
           title="Linkedin Management"

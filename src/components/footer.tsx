@@ -140,7 +140,7 @@ function Copyright() {
 function Credits() {
   return (
     <div className="text-sm/6 text-gray-500">
-      Crafted by: <Link target='_blank' href="https://github.com/anujnema5" className="text-gray-950 hover:text-gray-950/75 font-medium">Anuj Nema </Link>
+      Crafted by {"<3"} <Link target='_blank' href="https://github.com/anujnema5" className="text-gray-950 hover:text-gray-950/75 font-medium">Anuj Nema </Link>
     </div>
   )
 }
